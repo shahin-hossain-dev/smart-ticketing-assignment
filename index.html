@@ -37,7 +37,7 @@
     </style>
 </head>
 
-<body class="w-[95%] lg:w-full mx-auto inter">
+<body class="w-[95%] max-w-[1440px] lg:w-full mx-auto inter">
     <header class="lg:w-10/12 mx-auto">
         <!-- nav start -->
         <nav class="flex justify-between pt-2 lg:pt-12 pb-8 items-center">
@@ -59,9 +59,9 @@
                     for a sustainable
                     future.
                 </p>
-                <button
+                <a href="#paribahan"
                     class="btn raleway bg-primary-color border-0 font-bold text-base lg:text-xl px-8 text-white hover:bg-[#1DD100B3]">Buy
-                    Ticket</button>
+                    Ticket</a>
             </div>
         </section>
     </header>
@@ -72,27 +72,27 @@
             <div class="flex flex-col lg:flex-row gap-6 justify-between">
                 <!-- coupon card 1 -->
                 <div class="mt-8 bg-[#F78C9C] flex items-center justify-between  rounded-2xl">
-                    <div class="inter p-5 lg:p-12">
+                    <div class="inter p-5 lg:p-6">
                         <h2 class="text-3xl font-extrabold">15% OFF</h2>
                         <p class="text-xl font-bold">on your next purchase</p>
                         <p class="text-lg text-[#03071266]">use by February 2024</p>
                     </div>
                     <img class="h-[100%]" src="./images/cupon-devider.png" alt="">
-                    <div class="raleway p-5 lg:p-12 text-center">
+                    <div class="raleway p-5 lg:p-6 text-center">
                         <h2 class="text-3xl font-extrabold">NEW15</h2>
                         <p class="text-xl text-[#03071266]">Coupon Code</p>
                     </div>
                 </div>
                 <!-- coupon card 2 -->
                 <div class="mt-8 bg-[#FFBF0F] flex items-center justify-between  rounded-2xl">
-                    <div class="inter p-5 lg:p-12 ">
+                    <div class="inter p-5 lg:p-6 ">
                         <h2 class="text-3xl font-extrabold">20% OFF</h2>
                         <p class="text-xl font-bold">on your next purchase</p>
                         <p class="text-lg text-[#03071266]">use by February 2024</p>
                     </div>
                     <img class="h-[100%]" src="./images/cupon-devider.png" alt="">
-                    <div class="raleway p-5 lg:p-12 text-center">
-                        <h2 class="text-3xl font-extrabold">Couple 20</h2>
+                    <div class="raleway p-5 lg:p-6 text-center">
+                        <h2 class="text-3xl font-extrabold">Couple20</h2>
                         <p class="text-xl text-[#03071266]">Coupon Code</p>
                     </div>
                 </div>
@@ -105,13 +105,94 @@
         </section>
         <!-- coupon code section end -->
         <!-- paribahan section start -->
-        <section class="mt-24 mx-auto border-t-4 w-[10/12] p-24 rounded-[88px] border-primary-color">
+        <section id="paribahan"
+            class="mt-24 mx-auto border-t-4 lg:w-[10/12] p-5 lg:p-24 rounded-t-[30px] lg:rounded-t-[88px] border-primary-color bg-[#F7F8F8]">
             <h2 class="text-4xl raleway font-bold text-[#030712] text-center">Green Paribahan</h2>
             <p class="mt-6 text-center w-[95%] lg:w-[50%] mx-auto text-lg ">Green Paribahan: A leading Bangladeshi bus
                 company
                 emphasizing eco-friendly travel.
                 Committed to
                 sustainable practices for a greener journey experience.</p>
+
+            <div class="bg-[#FFFFFF] flex flex-col lg:flex-row  items-center justify-between mt-12 rounded-2xl">
+                <div class="p-8 flex-1 ">
+                    <div class=" flex flex-col lg:flex-row items-center justify-between">
+                        <div class="flex flex-col lg:items-center mb-4 lg:flex-row gap-4 ">
+                            <div>
+                                <img src="./images/bus-logo.png" alt="">
+                            </div>
+                            <div class="">
+                                <h2 class=" text-2xl lg:text-4xl raleway font-bold text-[#030712]">Green Paribahan</h2>
+                                <p class="text-lg lg:text-xl raleway font-bold text-[#03071299]">Coach-009-WEB !
+                                    AC_Business</p>
+                            </div>
+                        </div>
+                        <div>
+                            <button class="btn text-primary-color bg-[#1DD1001A] font-bold text-xl">
+                                <img src="./images/seat-green.png">
+                                <span id="total-seat">40</span> Seats left
+                            </button>
+                        </div>
+                    </div>
+                    <div class="bg-[#F7F8F8] p-6 mt-4">
+                        <div
+                            class="text-xl pb-4 border-b-2 border-dashed border-[#03071233] font-medium flex items-center justify-between">
+                            <p class="text-[#03071299]">Route</p>
+                            <p>Dhaka - Sylhet</p>
+                        </div>
+                        <div
+                            class="text-xl py-4 border-b-2 border-dashed border-[#03071233] font-medium flex items-center justify-between">
+                            <p class="text-[#03071299]">Departure Time</p>
+                            <p>9:00 PM</p>
+                        </div>
+                        <div class="pt-4 flex flex-col lg:flex-row justify-between gap-6">
+                            <p class="bg-[#0307120D] p-4 font-medium text-[#030712CC] rounded-lg">Boarding Point -
+                                Laxmipur</p>
+                            <p class="bg-[#0307120D] p-4 font-medium text-[#030712CC] rounded-lg">Dropping Point -
+                                Bogura</p>
+                            <p class="bg-[#0307120D] p-4 font-medium text-[#030712CC] rounded-lg">Est. Time - 11 Hour
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <hr class="border-b-2 lg:hidden border-dashed border-[#03071233] w-full">
+
+                <div>
+                    <img class="hidden lg:block h-[100%]" src="./images/info-devider.png" alt="">
+                </div>
+
+                <div class=" flex flex-col items-center gap-2 p-8">
+                    <img src="./images/fare.png" alt="">
+                    <h2 class="text-4xl raleway font-bold text-[#030712] text-center">550 Taka</h2>
+                    <p class="text-center text-xl raleway font-bold text-[#03071299]">Per Seat</p>
+                </div>
+            </div>
+            <!-- Ticket section start -->
+            <div class="mt-4 bg-[#FFFFFF] rounded-2xl p-8">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+                    <div class="lg:col-span-8">
+                        <h2
+                            class="text-2xl raleway font-bold text-[#030712] border-b-2 border-dashed border-[#03071233] pb-6">
+                            Select Your Seat</h2>
+                        <div
+                            class="flex justify-between py-6 text-[#030712] border-b-2 border-dashed border-[#03071233]">
+                            <div class="flex">
+                                <img src="./images/seat-gray.png" alt="">
+                                <p class="text-center text-xl raleway font-bold text-[#03071299]">Available</p>
+                            </div>
+                            <div class="flex">
+                                <img src="./images/seat-green-filled.png" alt="">
+                                <p class="text-center text-xl raleway font-bold text-[#03071299]">Selected</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-4">
+                        <h2
+                            class="text-2xl raleway font-bold text-[#030712] border-b-2 border-dashed border-[#03071233] pb-6">
+                            Confirm Your Seat</h2>
+                    </div>
+                </div>
+            </div>
         </section>
         <!-- paribahan section end -->
 
