@@ -9,8 +9,7 @@
     <!-- google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Raleway:wght@100..900&display=swap"
         rel="stylesheet">
     <!-- tailwind and Daisy UI -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
@@ -38,7 +37,7 @@
     </style>
 </head>
 
-<body class="w-[95%] lg:w-full mx-auto">
+<body class="w-[95%] lg:w-full mx-auto inter">
     <header class="lg:w-10/12 mx-auto">
         <!-- nav start -->
         <nav class="flex justify-between pt-2 lg:pt-12 pb-8 items-center">
@@ -51,8 +50,8 @@
         <section>
             <div
                 class="flex flex-col items-center justify-center gap-5 h-[320px] lg:h-[600px] rounded-xl lg:rounded-2xl py-20  bg-[linear-gradient(180deg,#03071280,#03071200),url('./images/banner.png')] bg-no-repeat bg-cover bg-center border-2 text-white">
-                <h1 class="font-extrabold text-2xl lg:text-5xl text-center ">End-to-End Travel with <br>
-                    <span class="text-primary-color ">Green Paribahan </span>
+                <h1 class="font-extrabold text-2xl lg:text-6xl text-center raleway">End-to-End Travel with <br>
+                    <span class="text-primary-color">Green Paribahan </span>
                 </h1>
                 <p class="text-center w-[95%] lg:w-[50%]">Green Paribahan: Connecting Bangladesh with eco-friendly
                     transportation
@@ -61,12 +60,50 @@
                     future.
                 </p>
                 <button
-                    class="btn bg-primary-color border-0 font-bold text-base lg:text-xl px-8 text-white hover:bg-[#1DD100B3]">Buy
+                    class="btn raleway bg-primary-color border-0 font-bold text-base lg:text-xl px-8 text-white hover:bg-[#1DD100B3]">Buy
                     Ticket</button>
             </div>
         </section>
     </header>
-    <main></main>
+    <main id="main">
+        <section class="mt-24 lg:w-10/12 mx-auto">
+            <h2 class="text-4xl font-bold text-[#030712] text-center">Best offers for you</h2>
+            <!-- coupon code start -->
+            <div class="flex flex-col lg:flex-row gap-6 justify-between">
+                <!-- coupon card 1 -->
+                <div class="mt-8 bg-[#F78C9C] flex items-center justify-between  rounded-2xl">
+                    <div class="inter p-5 lg:p-12">
+                        <h2 class="text-3xl font-extrabold">15% OFF</h2>
+                        <p class="text-xl font-bold">on your next purchase</p>
+                        <p class="text-lg text-[#03071266]">use by February 2024</p>
+                    </div>
+                    <img class="h-[100%]" src="./images/cupon-devider.png" alt="">
+                    <div class="raleway p-5 lg:p-12 text-center">
+                        <h2 class="text-3xl font-extrabold">NEW15</h2>
+                        <p class="text-xl text-[#03071266]">Coupon Code</p>
+                    </div>
+                </div>
+                <!-- coupon card 2 -->
+                <div class="mt-8 bg-[#FFBF0F] flex items-center justify-between  rounded-2xl">
+                    <div class="inter p-5 lg:p-12 ">
+                        <h2 class="text-3xl font-extrabold">20% OFF</h2>
+                        <p class="text-xl font-bold">on your next purchase</p>
+                        <p class="text-lg text-[#03071266]">use by February 2024</p>
+                    </div>
+                    <img class="h-[100%]" src="./images/cupon-devider.png" alt="">
+                    <div class="raleway p-5 lg:p-12 text-center">
+                        <h2 class="text-3xl font-extrabold">Couple 20</h2>
+                        <p class="text-xl text-[#03071266]">Coupon Code</p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <button
+                    class=" rounded-xl transition duration-300 raleway border-primary-color border text-primary-color font-bold text-base lg:text-xl px-8 py-5 text-[#1DD100B3] hover:text-white hover:bg-[#1DD100]">See
+                    All Offers</button>
+            </div>
+        </section>
+    </main>
     <footer></footer>
 
     <script src="./scripts/utilities.js"></script>
