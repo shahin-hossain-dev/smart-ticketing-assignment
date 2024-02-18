@@ -97,7 +97,7 @@
                     </div>
                     <img class="h-[100%]" src="./images/cupon-devider.png" alt="">
                     <div class="raleway p-5 lg:p-6 text-center">
-                        <h2 class="text-3xl font-extrabold">Couple20</h2>
+                        <h2 class="text-3xl font-extrabold">Couple 20</h2>
                         <p class="text-xl text-[#03071266]">Coupon Code</p>
                     </div>
                 </div>
@@ -350,7 +350,8 @@
                                         <input id="coupon-field" type="text" class="grow"
                                             placeholder="Have any copupon?" />
                                         <button id="btn-discount"
-                                            class="btn absolute right-0 bg-[#1DD100] font-semibold text-white  hover:bg-[#1DD100B3]">Apply</button>
+                                            class="btn absolute right-0 bg-[#1DD100] font-semibold text-white disabled:bg-slate-300 disabled:text-white  hover:bg-[#1DD100B3]"
+                                            disabled>Apply</button>
                                     </label>
                                 </div>
                                 <div class=" hidden flex justify-between text-lg text-[#1DD100] font-semibold ">
@@ -378,7 +379,7 @@
                                     <span class="label-text text-lg text-[#030712] font-bold">Phone Number<span
                                             class="text-red-600 text-lg">*</span></span>
                                 </div>
-                                <input type="number" placeholder="Enter Your Number"
+                                <input id="phone-number" type="number" placeholder="Enter Your Number"
                                     class="input input-bordered w-full" />
                             </label>
                             <label class="form-control w-full mt-6">
@@ -407,20 +408,21 @@
         <section>
             <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle w-[100%]">
                 <div class="modal-box">
-                    <div class="flex flex-col justify-center items-center">
+                    <div class="flex space-y-4 flex-col justify-center items-center">
                         <img src="./images/success.png" alt="">
                         <h3 class="font-bold text-lg text-[#1DD100]">SUCCESS!</h3>
-                        <p class="py-4 text-center">Thank you for Booking Our Bus Seats.
-                            We are working hard to find the best service and deals for you.
+                        <p class="py-4 text-center font-bold">Thank you for Booking Our Bus Seats. <br>
+                            We are working hard to find the best service for you.
                             <br>
-                            <span>Shortly you will find a confirmation in your email.</span>
+                            <span class="font-normal">Shortly you will find a confirmation in your email.</span>
                         </p>
-                    </div>
-                    <div class="modal-action">
-                        <form method="dialog">
-                            <!-- if there is a button in form, it will close the modal -->
-                            <button class="btn">Close</button>
-                        </form>
+                        <div class="modal-action">
+                            <form method="dialog">
+                                <!-- if there is a button in form, it will close the modal -->
+                                <button
+                                    class="btn bg-[#1DD100] px-10 font-semibold text-white min-h-14 w-ful hover:bg-[#1DD100B3]"">Continue</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </dialog>
@@ -430,8 +432,8 @@
     </main>
     <footer></footer>
 
-    <script src="./scripts/utilities.js"></script>
-    <script src="./scripts/app.js"></script>
+    <script src=" ./scripts/utilities.js"></script>
+                                    <script src="./scripts/app.js"></script>
 </body>
 
 </html>

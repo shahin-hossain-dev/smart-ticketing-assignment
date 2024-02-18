@@ -4,7 +4,6 @@ const maxSeat = [];
 for (const seat of allSeat) {
     seat.addEventListener('click', function (event) {
         const element = event.target;
-
         if (maxSeat.includes(element.innerText) === false) {
 
             if (maxSeat.length < 4) {
@@ -15,6 +14,7 @@ for (const seat of allSeat) {
                 setSelectedSeat();
                 setTicketList(element);
                 totalPriceCount();
+
             }
             else {
                 alert("You can't buy over 4 tickets");
@@ -27,12 +27,8 @@ for (const seat of allSeat) {
     })
 }
 
-document.getElementById('next').addEventListener('click', function goNext() {
-    console.log('Finish')
-})
-function goNext() {
 
-}
+
 document.getElementById('btn-discount').addEventListener('click', function (e) {
     const couponCode = getInputValueById('coupon-field');
     const totalPrice = getElementValueById('total');
@@ -48,7 +44,7 @@ document.getElementById('btn-discount').addEventListener('click', function (e) {
             setElementValueById('discount', discount);
             e.target.parentNode.classList.add('hidden')
         }
-        else if (couponCode === 'Couple20') {
+        else if (couponCode === 'Couple 20') {
             console.log('20% discount')
             const discount = totalPrice * 20 / 100;
             const discountPrice = totalPrice - discount;
@@ -79,11 +75,24 @@ function totalPriceCount() {
 
     setElementValueById('total', updatedTotal);
     setElementValueById('grand-total', updatedTotal);
-    if (updatedTotal > 0) {
+    /* if (updatedTotal > 0) {
         const next = document.getElementById('next');
         next.removeAttribute('disabled');
-    }
+    } */
 }
+
+document.getElementById('phone-number').addEventListener('keyup', function (e) {
+    const number = e.target.value;
+    const numbers = number.split('');
+    const next = document.getElementById('next');
+    console.log(numbers)
+    if (numbers.length === 11 && maxSeat.length > 0) {
+        next.removeAttribute('disabled');
+    }
+    else {
+        next.setAttribute('disabled', true);
+    }
+})
 
 function setTicketList(element) {
     const selectedContainer = document.getElementById('selected-container');
@@ -103,6 +112,10 @@ function setSelectedSeat() {
     const selectedSeat = getElementValueById('selected-seat-count');
     const updateSelectedSeat = selectedSeat + 1;
     setElementValueById('selected-seat-count', updateSelectedSeat)
+    if (updateSelectedSeat === 4) {
+        const discountBtn = document.getElementById('btn-discount');
+        discountBtn.removeAttribute('disabled');
+    }
 }
 
 function totalSeatCount() {
