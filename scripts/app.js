@@ -4,7 +4,6 @@ const maxSeat = [];
 for (const seat of allSeat) {
     seat.addEventListener('click', function (event) {
         const element = event.target;
-        const elementId = element.innerText;
 
         if (maxSeat.includes(element.innerText) === false) {
 
@@ -16,28 +15,53 @@ for (const seat of allSeat) {
                 setSelectedSeat();
                 setTicketList(element);
                 totalPriceCount();
-
             }
             else {
                 alert("You can't buy over 4 tickets");
             }
         }
         else {
-            alert("This seat already sold")
+            alert("This seat already Booked")
         }
 
     })
 }
 
-document.getElementById('btn-discount').addEventListener('click', function () {
-    const couponCode = getInputValueById('coupon-field')
-    if (couponCode === 'NEW15') {
-        console.log('15% discount')
-    }
-    else if (couponCode === 'Couple20') {
-        console.log('20% discount')
-    }
+document.getElementById('next').addEventListener('click', function goNext() {
+    console.log('Finish')
+})
 
+document.getElementById('btn-discount').addEventListener('click', function (e) {
+    const couponCode = getInputValueById('coupon-field');
+    const totalPrice = getElementValueById('total');
+    const discountElement = document.getElementById('discount').parentNode.parentNode;
+
+    if (maxSeat.length === 4) {
+        if (couponCode === 'NEW15') {
+            console.log('15% discount')
+            const discount = totalPrice * 15 / 100;
+            const discountPrice = totalPrice - discount;
+            setElementValueById('grand-total', discountPrice);
+            discountElement.classList.remove('hidden');
+            setElementValueById('discount', discount);
+            e.target.parentNode.classList.add('hidden')
+        }
+        else if (couponCode === 'Couple20') {
+            console.log('20% discount')
+            const discount = totalPrice * 20 / 100;
+            const discountPrice = totalPrice - discount;
+            setElementValueById('grand-total', discountPrice);
+            discountElement.classList.remove('hidden');
+            setElementValueById('discount', discount);
+            e.target.parentNode.classList.add('hidden')
+        }
+        else {
+            alert('Coupon code did not matched')
+        }
+    }
+    else {
+        alert('You have to book 4 seat');
+    }
 })
 
 function getInputValueById(elementId) {
@@ -46,12 +70,17 @@ function getInputValueById(elementId) {
     return value;
 }
 
-
 function totalPriceCount() {
     const total = getElementValueById('total');
     const ticketPrice = getElementValueById('ticket-price');
     const updatedTotal = total + ticketPrice;
+
     setElementValueById('total', updatedTotal);
+    setElementValueById('grand-total', updatedTotal);
+    if (updatedTotal > 0) {
+        const next = document.getElementById('next');
+        next.removeAttribute('disabled');
+    }
 }
 
 function setTicketList(element) {

@@ -353,10 +353,14 @@
                                             class="btn absolute right-0 bg-[#1DD100] font-semibold text-white  hover:bg-[#1DD100B3]">Apply</button>
                                     </label>
                                 </div>
+                                <div class=" hidden flex justify-between text-lg text-[#1DD100] font-semibold ">
+                                    <p>Discount</p>
+                                    <p>BDT <span id="discount">00</span></p>
+                                </div>
                                 <!-- grand total -->
-                                <div class="flex justify-between px-4 text-lg text-[#030712] font-semibold ">
+                                <div class="flex justify-between text-lg text-[#030712] font-semibold ">
                                     <p>Grand Total</p>
-                                    <p>BDT <span>100</span></p>
+                                    <p>BDT <span id="grand-total">00</span></p>
                                 </div>
                             </div>
                         </div>
@@ -383,9 +387,10 @@
                                 </div>
                                 <input type="email" placeholder="Enter Your Name" class="input input-bordered w-full" />
                             </label>
-                            <div class="mt-6">
-                                <button
-                                    class="btn bg-[#1DD100] font-semibold text-white min-h-14 w-full  hover:bg-[#1DD100B3]">Next</button>
+                            <div class="mt-6 ">
+                                <button id="next"
+                                    class="btn bg-[#1DD100] font-semibold text-white min-h-14 w-full disabled:bg-slate-300 disabled:text-white hover:bg-[#1DD100B3]"
+                                    disabled>Next</button>
                             </div>
                             <div class="flex justify-around mt-6">
                                 <small><a class="link" href="#">Terms and Conditions</a></small>
