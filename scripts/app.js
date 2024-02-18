@@ -30,7 +30,9 @@ for (const seat of allSeat) {
 document.getElementById('next').addEventListener('click', function goNext() {
     console.log('Finish')
 })
+function goNext() {
 
+}
 document.getElementById('btn-discount').addEventListener('click', function (e) {
     const couponCode = getInputValueById('coupon-field');
     const totalPrice = getElementValueById('total');
