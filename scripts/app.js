@@ -86,7 +86,7 @@ document.getElementById('phone-number').addEventListener('keyup', function (e) {
     const numbers = number.split('');
     const next = document.getElementById('next');
     console.log(numbers)
-    if (numbers.length === 11 && maxSeat.length > 0) {
+    if (numbers.length <= 11 && maxSeat.length > 0) {
         next.removeAttribute('disabled');
     }
     else {
@@ -137,6 +137,5 @@ function getElementValueById(elementId) {
 }
 
 function showModal() {
-
     location.reload()
 }
