@@ -132,7 +132,7 @@ function setElementValueById(elementId, value) {
 
 function getElementValueById(elementId) {
     const element = document.getElementById(elementId);
-    const value = parseInt(element.innerText);
+    const value = parseFloat(element.innerText);
     return value;
 }
 
