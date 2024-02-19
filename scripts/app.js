@@ -9,7 +9,7 @@ for (const seat of allSeat) {
             if (maxSeat.length < 4) {
                 maxSeat.push(element.innerText);
                 element.classList.add('bg-[#1DD100]');
-                element.classList.add('text-white');
+                element.classList.add('text-[#FFFFFF]');
                 totalSeatCount();
                 setSelectedSeat();
                 setTicketList(element);
@@ -136,3 +136,7 @@ function getElementValueById(elementId) {
     return value;
 }
 
+function showModal() {
+
+    location.reload()
+}
